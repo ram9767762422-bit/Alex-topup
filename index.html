@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ALEX TOPUP — Free Fire Nepal</title>
+  <meta name="description" content="ALEX TOPUP — Free Fire top-up store for Nepal. Diamonds, memberships, Level Up Pass, Airdrop and Less Is More.">
+  <meta name="theme-color" content="#050b10">
+  <meta name="robots" content="index,follow">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home"><span>ALEX</span> TOPUP</a>
+    <nav id="nav">
+      <a href="#home">Home</a>
+      <a href="#products">Top Up</a>
+      <a href="#services">Services</a>
+      <a href="#payment">Payment</a>
+      <a href="#orders">Orders</a>
+      <a href="#account">Account</a><a href="#faq">FAQ</a>
+    </nav>
+    <button class="menu-btn" onclick="toggleMenu()" aria-label="Menu">☰</button>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="pill">🇳🇵 NEPAL SERVER • FAST DELIVERY</div>
+        <h1>FREE FIRE<br><span>TOP UP CENTER</span></h1>
+        <p>Diamonds, memberships, Airdrop, Less Is More & Level Up Pass — all in one place.</p>
+        <a class="btn primary" href="#products">Top Up Now</a>
+        <a class="btn ghost" href="https://wa.me/9779828821325" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+      <img src="assets/promo-banner.jpg" alt="ALEX TOPUP promotional banner" class="hero-art">
+    </section>
+
+    <section id="account" class="login-wrap login-top">
+      <div class="login-card">
+        <div class="eyebrow">ACCOUNT LOGIN</div>
+        <h2 id="accountTitle">Welcome to ALEX TOPUP</h2>
+        <p>Login or register first, then select your Free Fire top-up package.</p>
+        <input id="email" type="email" placeholder="Email / Username">
+        <input id="password" type="password" placeholder="Password">
+        <button class="btn primary wide" onclick="demoLogin()">LOGIN</button>
+        <button class="text-btn" onclick="demoRegister()">Create demo account</button>
+        <div id="loginMsg" class="form-msg"></div>
+      </div>
+    </section>
+
+    <section id="products" class="section">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">FREE FIRE STORE</div>
+          <h2>Choose your top-up</h2>
+        </div>
+        <div class="server">SERVER: <b>NEPAL 🇳🇵</b></div>
+      </div>
+      <div class="store-tools">
+        <input id="productSearch" class="product-search" type="search" placeholder="Search diamonds, membership, Level Up..." aria-label="Search products">
+        <div class="filters">
+          <button class="filter-btn active" data-cat="All" onclick="filterProducts('All')">All</button>
+          <button class="filter-btn" data-cat="Diamonds" onclick="filterProducts('Diamonds')">Diamonds</button>
+          <button class="filter-btn" data-cat="Membership" onclick="filterProducts('Membership')">Membership</button>
+          <button class="filter-btn" data-cat="Special" onclick="filterProducts('Special')">Special</button>
+          <button class="filter-btn" data-cat="Level Up Pass" onclick="filterProducts('Level Up Pass')">Level Up Pass</button>
+        </div>
+      </div>
+      <div id="productGrid" class="product-grid"></div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">AVAILABLE SERVICES</div>
+          <h2>Everything you need</h2>
+        </div>
+      </div>
+      <div class="service-grid">
+        <article class="service"><span>💎</span><h3>Diamonds</h3><p>Fast Free Fire diamond top-up.</p></article>
+        <article class="service"><span>🎁</span><h3>Airdrop</h3><p>Special event and Airdrop packages.</p></article>
+        <article class="service"><span>📦</span><h3>Less Is More</h3><p>Special discounted diamond packs.</p></article>
+        <article class="service"><span>👑</span><h3>Membership</h3><p>Weekly and Monthly Membership.</p></article>
+        <article class="service"><span>🚀</span><h3>Level Up Pass</h3><p>Multiple level packages.</p></article>
+        <article class="service"><span>🛡️</span><h3>Secure Order</h3><p>Order tracking and support.</p></article>
+      </div>
+    </section>
+
+    <section class="how section">
+      <div class="section-head"><div><div class="eyebrow">HOW IT WORKS</div><h2>Simple 4-step order</h2></div></div>
+      <div class="steps">
+        <div><b>01</b><span>Select package</span></div>
+        <div><b>02</b><span>Enter UID</span></div>
+        <div><b>03</b><span>Pay with eSewa / Khalti / MyPay / Fonepay</span></div>
+        <div><b>04</b><span>Receive top-up</span></div>
+      </div>
+    </section>
+
+
+    <section id="payment" class="section">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">PAYMENT CENTER</div>
+          <h2>Pay securely with QR</h2>
+          <p class="section-note">Select your payment method, scan the QR, then send the payment screenshot with your UID/order ID on WhatsApp.</p>
+        </div>
+        <div class="server">ALEX TOPUP • NEPAL 🇳🇵</div>
+      </div>
+      <div class="payment-grid">
+        <article class="payment-card khalti-card">
+          <div class="pay-head"><span class="pay-logo">K</span><div><b>Khalti</b><small>by IME</small></div></div>
+          <div class="qr-frame"><img src="assets/khalti-qr.jpg" alt="ALEX TOPUP Khalti QR"></div>
+          <h3>ALEX TOPUP</h3><p>Ramshankar Kumar Mandal</p><strong>9713132379</strong>
+          <a class="btn primary wide" id="waOrderLink" href="https://wa.me/9779828821325?text=Payment%20done%20for%20ALEX%20TOPUP" target="_blank" rel="noopener">Send Payment Screenshot</a>
+        </article>
+        <article class="payment-card mypay-card">
+          <div class="pay-head"><span class="pay-logo">M</span><div><b>MyPay</b><small>QR Payment</small></div></div>
+          <div class="qr-frame"><img src="assets/mypay-qr.jpg" alt="ALEX TOPUP MyPay QR"></div>
+          <h3>ALEX TOPUP</h3><p>Ramshankar Kumar Mandal</p><strong>9713132379</strong>
+          <a class="btn primary wide" id="waOrderLink" href="https://wa.me/9779828821325?text=Payment%20done%20for%20ALEX%20TOPUP" target="_blank" rel="noopener">Send Payment Screenshot</a>
+        </article>
+        <article class="payment-card esewa-card">
+          <div class="pay-head"><span class="pay-logo">e</span><div><b>eSewa</b><small>Scan to Pay</small></div></div>
+          <div class="qr-frame"><img src="assets/esewa-qr.jpg" alt="ALEX TOPUP eSewa QR"></div>
+          <h3>ALEX TOPUP</h3><p>Ramshankar Kumar Mandal</p><strong>9713132379</strong>
+          <a class="btn primary wide" id="waOrderLink" href="https://wa.me/9779828821325?text=Payment%20done%20for%20ALEX%20TOPUP" target="_blank" rel="noopener">Send Payment Screenshot</a>
+        </article>
+        <article class="payment-card fonepay-card">
+          <div class="pay-head"><span class="pay-logo">F</span><div><b>Fonepay</b><small>QR Payment</small></div></div>
+          <div class="qr-frame"><img src="assets/fonepay-qr.jpg" alt="ALEX TOPUP Fonepay QR"></div>
+          <h3>ALEX TOPUP</h3><p>Ramshankar Kumar Mandal</p><strong>Terminal: 2222090021078968</strong>
+          <a class="btn primary wide" id="waOrderLink" href="https://wa.me/9779828821325?text=Payment%20done%20for%20ALEX%20TOPUP" target="_blank" rel="noopener">Send Payment Screenshot</a>
+        </article>
+      </div>
+      <div class="payment-note"><b>Payment note:</b> QR payments are manual in this version. Never share your banking/app password or OTP. After payment, keep the transaction receipt and send the screenshot only through the official ALEX TOPUP contact.</div>
+    </section>
+
+    <section id="faq" class="section">
+      <div class="section-head"><div><div class="eyebrow">HELP</div><h2>Frequently asked questions</h2></div></div>
+      <div class="faq-grid">
+        <details><summary>How do I order?</summary><p>Login, select a package, enter your UID, choose a payment method, create the order, then pay by QR and send the receipt with the order ID on WhatsApp.</p></details>
+        <details><summary>Is UID name checking live?</summary><p>Not yet. This public static build validates the UID format only. A real player-name lookup requires an authorized Free Fire service/API connected on a secure server.</p></details>
+        <details><summary>Are payments automatic?</summary><p>No. QR payment and receipt verification are manual in this build. Do not share your OTP, PIN or banking password.</p></details>
+        <details><summary>How can I contact ALEX TOPUP?</summary><p>WhatsApp: +977 9828821325<br>Email: ramshankar2005.01.01@gmail.com</p></details>
+      </div>
+    </section>
+
+    <section id="orders" class="section account-card">
+      <div>
+        <div class="eyebrow">YOUR ORDERS</div>
+        <h2>Order history</h2>
+        <p>Orders created in this public static demo are stored only in this browser. For a real store, connect a secure database/admin backend.</p>
+      </div>
+      <div id="orderList" class="order-list"></div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-brand">ALEX TOPUP</div>
+    <p>Free Fire Top Up Store • Nepal Server</p>
+    <div class="footer-links">
+      <a href="https://wa.me/9779828821325" target="_blank" rel="noopener">WhatsApp: +977 9828821325</a>
+      <a href="mailto:ramshankar2005.01.01@gmail.com">ramshankar2005.01.01@gmail.com</a><a href="#payment">Payment QR</a><a href="#faq">Help / FAQ</a>
+    </div>
+    <small>© 2026 ALEX TOPUP. All rights reserved.</small>
+  </footer>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-card order-flow">
+      <button class="close" onclick="closeModal()">×</button>
+      <div class="eyebrow" id="stepLabel">STEP 1 OF 3</div>
+      <h2 id="modalProduct">Product</h2>
+      <p id="modalPrice"></p>
+      <div id="orderStep" class="step-text">Confirm your selected package.</div>
+      <input id="orderUID" class="hidden" inputmode="numeric" placeholder="Free Fire Player UID">
+      <button id="verifyBtn" class="btn ghost wide hidden" onclick="verifyUID()">Check Player UID</button>
+      <div id="orderName" class="verified"></div>
+      <div id="paymentChoices" class="payment-choices hidden">
+        <b>Choose Payment Method</b>
+        <button class="payment-choice" data-pay="eSewa" onclick="selectPayment('eSewa')">eSewa</button>
+        <button class="payment-choice" data-pay="Khalti" onclick="selectPayment('Khalti')">Khalti</button>
+        <button class="payment-choice" data-pay="MyPay" onclick="selectPayment('MyPay')">MyPay</button>
+        <button class="payment-choice" data-pay="Fonepay" onclick="selectPayment('Fonepay')">Fonepay</button>
+      </div>
+      <div id="paymentSummary" class="payment-summary hidden"></div>
+      <button id="orderNext" class="btn primary wide" onclick="nextOrderStep()">Next: Enter UID</button>
+      <p class="tiny">After order creation, use the Payment Center QR and send the payment receipt with your UID/order ID on WhatsApp. Never share OTP, PIN or passwords.</p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
